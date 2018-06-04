@@ -10,9 +10,10 @@ import CheckListPage from './CheckListPage';
 import FeelingsPage from './FeelingsPage';
 import IntroductionPage from './IntroductionPage';
 import ResourcesPage from './ResourcesPage';
+import InsurancePage from './InsurancePage';
+import MessageComposition from '/MessageComposition';
 //import Splash from './Splash';
 import firebase from 'firebase'
-
 
 export default class App extends Component {
   componentWillMount() {
@@ -51,6 +52,8 @@ export default class App extends Component {
           <Scene key="feelings" component={FeelingsPage} title="Mango Help  " />
           <Scene key="intro" component={IntroductionPage} title="Mango Help " />
           <Scene key="resources" component={ResourcesPage} title="Mango Help     " />
+          <Scene key="insurance" component={InsurancePage} title="Mango Help      " />
+          <Scene key="message" component={MessageComposition} title="Mango Help         " />
         </Scene>
       </Router>
       </Container>

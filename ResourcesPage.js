@@ -29,7 +29,7 @@ export default class App extends Component {
             fontFamily='Lato'
             buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
             title='VIEW NOW'
-            onPress = {() => {console.log('varin')}}/>
+            onPress = {Actions.message}/>
         </Card>
           </TouchableOpacity>
 
