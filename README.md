@@ -1,2 +1,2 @@
-# CS52_UpdatedMangoHelp
+# CS52
 MangoHelp Project

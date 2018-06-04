@@ -16,31 +16,11 @@ import {
   Label,
   Title,
 } from 'native-base';
-import { AsyncStorage} from 'react-native';
+
 import { Left, Right, Icon,} from 'native-base';
 import { Actions } from 'react-native-router-flux';
-import firebase from 'firebase';
 
 export default class HeaderIconExample extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.nextPage = this.nextPage.bind(this);
-  }
-
-  handleClick() {
-    console.log('Click happened');
-    firebase.database().ref('data').set(
-      {
-        healthtype: 'Mental Health'
-      }
-    )
-    () => Actions.feelings
-  }
-
-  const nextPage = () => Actions.feelings
-
-
   render() {
     return (
       <Container>
@@ -51,7 +31,7 @@ export default class HeaderIconExample extends Component {
                 </Button>
           <Button > </Button>
 
-           <Button large block info onPress={this.handleClick}>
+           <Button large block info onPress={Actions.feelings}>
             <Text >Mental Health</Text>
                      <ListItem avatar>
                 <Thumbnail source={{ uri: 'https://d30y9cdsu7xlg0.cloudfront.net/png/1211643-200.png' }} />

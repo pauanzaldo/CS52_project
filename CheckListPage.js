@@ -77,7 +77,7 @@ export default class CheckListPage extends Component {
           <Button block transparent> </Button>
 
           <Button large block transparent style={{bottom:8}}>
-                <Text  large onPress={Actions.search}> Next </Text>
+                <Text  large onPress={Actions.insurance}> Next </Text> //took out search - maybe add later?
           </Button>
         </Content>
       </Container>

@@ -24,41 +24,41 @@ export default class HeaderIconExample extends Component {
   render() {
     return (
       <Container>
-                <Content padder>
+          <Content padder>
                 <Button large block transparent dark>
-                <Text large> How are you feeling today? </Text>
+                  <Text large> Do you have insurance? </Text>
                 </Button>
+
           <Button > </Button>
 
-           <Button large block success onPress={Actions.checklist}>
-            <Text>Happy</Text>
+           <Button large block success onPress={Actions.resources}>
+            <Text>Yes</Text>
                      <ListItem avatar>
                 <Thumbnail source={{ uri: 'https://icon-icons.com/icons2/510/PNG/512/happy_icon-icons.com_50377.png' }} />
             </ListItem>
           </Button>
+
           <Button large>
           </Button>
-           <Button large block info onPress={Actions.checklist}>
-            <Text>Anxious</Text>
-                     <ListItem avatar>
+
+            <Text>No</Text>
+            <ListItem avatar>
                 <Thumbnail source={{ uri: 'https://static.thenounproject.com/png/116790-200.png' }} />
             </ListItem>
+
+          <Button large>
           </Button>
-                    <Button large>
+
+          <Button large block warning onPress={Actions.resources}>
+            <Text>I do not know</Text>
+               <ListItem avatar>
+                   <Thumbnail source={{ uri: 'https://cdn2.iconfinder.com/data/icons/picons-essentials/71/smiley_sad-512.png' }} />
+                </ListItem>
           </Button>
-           <Button large block danger onPress={Actions.checklist}>
-            <Text>Sad</Text>
-                     <ListItem avatar>
-                <Thumbnail source={{ uri: 'https://cdn2.iconfinder.com/data/icons/picons-essentials/71/smiley_sad-512.png' }} />
-            </ListItem>
-          </Button>
-            <Button large>  </Button>
-           <Button large block warning onPress={Actions.checklist}>
-            <Text>So So</Text>
-                     <ListItem avatar>
-                <Thumbnail source={{ uri:'https://cdn2.iconfinder.com/data/icons/rounded-white-emoticon/139/Meh-RoundedWhite_emoticon-512.png' }} />
-            </ListItem>
-          </Button>
+
+       <Button large>
+       </Button>
+
         </Content>
       </Container>
 
