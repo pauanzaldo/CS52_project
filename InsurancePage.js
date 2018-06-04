@@ -40,12 +40,12 @@ export default class HeaderIconExample extends Component {
 
           <Button large>
           </Button>
-
+          <Button large block danger onPress={Actions.checklist}>
             <Text>No</Text>
             <ListItem avatar>
                 <Thumbnail source={{ uri: 'https://static.thenounproject.com/png/116790-200.png' }} />
             </ListItem>
-
+            </Button>
           <Button large>
           </Button>
 
@@ -55,10 +55,8 @@ export default class HeaderIconExample extends Component {
                    <Thumbnail source={{ uri: 'https://cdn2.iconfinder.com/data/icons/picons-essentials/71/smiley_sad-512.png' }} />
                 </ListItem>
           </Button>
-
        <Button large>
        </Button>
-
         </Content>
       </Container>
 
