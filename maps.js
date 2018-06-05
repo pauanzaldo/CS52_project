@@ -17,18 +17,17 @@ import {
   Label,
   Title,
 } from 'native-base';
-
 import { Left, Right, Icon, } from 'native-base';
 import { Actions } from 'react-native-router-flux';
-
 import firebase from 'firebase';
 
+let lat = 37.7749;
+let long = -122.4194;
 export default class HeaderIconExample extends Component {
   constructor(props) {
     super(props);
     this.itemsRef = this.getRef();
     this.state = { items: null };
-
   }
 
   componentDidMount() {
@@ -69,30 +68,24 @@ export default class HeaderIconExample extends Component {
       <Container>
         {
           this.state.items.map((item, index) => {
-            
-            if (item.key === this.props.id) {
-              return (
-                <View style={styles.container}>
-                  <MapView style={styles.map}
-                    region={{
-                      latitude: item.lat,
-                      longitude: item.long,
-                      latitudeDelta: 0.1,
-                      longitudeDelta: 0.1
-                    }}>
+            <View style={styles.container}>
+              <MapView style={styles.map}
+                region={{
+                  latitude: lat,
+                  longitude: long,
+                  latitudeDelta: 0.1,
+                  longitudeDelta: 0.1
+                }}>
 
-                    <MapView.Marker
-                      coordinate={{
-                        latitude: item.lat,
-                        longitude: item.long,
-                      }}
-                      title={item.name}
-                      description={item.description} />
-
-                  </MapView>
-                </View>
-              )
-            }
+                <MapView.Marker
+                  coordinate={{
+                    latitude: item.lat,
+                    longitude: item.long,
+                  }}
+                  title={item.name}
+                  description={item.description} />
+              </MapView>
+            </View>
           })
         }
 
