@@ -70,7 +70,7 @@ export default class SixteenTab extends Component {
                                             fontFamily='Lato'
                                             buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
                                             title='VIEW NOW'
-                                            onPress={Actions.maps} />
+                                            onPress={Actions.maps({id: item.key})} />
                                     </Card>
                                 </TouchableOpacity>
                             )
